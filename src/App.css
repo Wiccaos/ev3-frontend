@@ -10,7 +10,7 @@ body {
 }
 
 p{
-  font-family: 'Reenie Beanie', cursive;
+  font-family: 'Reenie Beanie';
   font-size: 25px;
   font-weight: bold;
   line-height: 1.5;
@@ -18,8 +18,34 @@ p{
 
 label{
   font-weight: bold;
-  color: #EC7063;
+  color: #fff;
   margin-right: 10px;
+}
+
+input{
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+input:active{
+  border: none;
+  outline: none;
+}
+
+.subir{
+  background-color: #111;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+}
+
+.subir:hover {
+  background-color: #333;
 }
 
 .contenedor-app {
@@ -27,14 +53,14 @@ label{
   text-align: center;
 }
 
-.nueva-nota input,
-.nueva-nota button{
+.nuevo-postit input,
+.nuevo-postit button{
   margin: 10px auto;
   padding: 8px;
   margin-right: 5px;
 }
 
-.contenedor-notas {
+.contenedor-postits {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -45,9 +71,12 @@ label{
   margin-right: auto;
 }
 
-.nota {
+.postit {
   background-color: #FFFFCC;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  padding-top: 2px ;
   position: relative;
   border-radius: 5px;
   rotate: -2deg;
@@ -58,7 +87,7 @@ label{
   margin: 10px;
 }
 
-.nota.important {
+.postit.importante {
   background-color: #EC7063;
   rotate: 2deg;
 }
@@ -75,17 +104,17 @@ label{
 
 @media (max-width: 600px) {
   /* el @media es para que cuando la página sea como en un teléfono se cambie a estas reglas */
-  .contenedor-notas {
+  .contenedor-postits {
     grid-template-columns: 1fr;   /* Solo una nota por fila */
     width: 100%;                  /* ocupa todo el ancho disponible */
     justify-items: center;        /* Centra las notas*/
   }
-  .nota {
+  .postit {
     width: 90%;
     max-width: 320px;
   }
   /* Para cambiar la disposiciópn del form */
-  .nueva-nota {
+  .nuevo-postit {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -93,8 +122,8 @@ label{
     max-width: 320px;
     margin: 0 auto;
   }
-  .nueva-nota input,
-  .nueva-nota button {
+  .nuevo-postit input,
+  .nuevo-postit button {
     margin: 8px 0;
     width: 100%;
     box-sizing: border-box;

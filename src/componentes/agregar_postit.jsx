@@ -11,20 +11,20 @@ function FormularioPostIt({ Agregar }) {
       alert("La descripción es obligatoria");
       return;
     }
-    Agregar({ titulo, desc: descripcion, important: importante });
+    Agregar({ titulo, desc: descripcion, importante: importante });
     setTitulo('');
     setDescripcion('');
     setImportante(false);
   };
 
   return (
-    <form className="nueva-nota" onSubmit={envio}>
+    <form className="nuevo-postit" onSubmit={envio}>
       <input type="text" placeholder="Título (opcional)" value={titulo} onChange={(e) => setTitulo(e.target.value)}/>
       <input type="text" placeholder="Descripción *" value={descripcion} onChange={(e) => setDescripcion(e.target.value)} required />
       <label>
-        <input type="checkbox" checked={importante} onChange={(e) => setImportante(e.target.checked)} /> Importante
+        <input type="checkbox" checked={importante} onChange={(e) => setImportante(e.target.checked)} /> Importante!
       </label>
-      <button type="submit">Agregar</button>
+      <button className='subir' type="submit">Agregar</button>
     </form>
   );
 }
