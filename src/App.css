@@ -1,38 +1,71 @@
-.App {
+/* Para importar la fuente desde google fonts directamente al css */
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #666;
+  color: #111;
+  margin: 0;
+  padding: 0;
+}
+
+p{
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.contenedor-app {
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nueva-nota input,
+.nueva-nota textarea,
+.nueva-nota button{
+  margin: 10px auto;
+  padding: 8px;
+  margin-right: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.contenedor-notas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+  margin: 20px;
+}
+
+.nota {
+  background-color: #FFFFCC;
+  padding: 20px;
+  position: relative;
+  border-radius: 5px;
+  rotate: -2deg;
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px rgb(54, 54, 54);
+}
+
+.nota.important {
+  background-color: #EC7063;
+  rotate: 2deg;
+}
+
+.cerrar {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* @media (max-width: 600px) {
+  .contenedor-notas {
+    grid-template-columns: 2fr;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+} */
