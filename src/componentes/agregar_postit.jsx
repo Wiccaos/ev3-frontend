@@ -5,7 +5,7 @@ function FormularioPostIt({ Agregar }) {
   const [descripcion, setDescripcion] = useState('');
   const [importante, setImportante] = useState(false);
 
-  const manejarEnvio = (e) => {
+  const envio = (e) => {
     e.preventDefault();
     if (!descripcion.trim()) {
       alert("La descripción es obligatoria");
@@ -18,7 +18,7 @@ function FormularioPostIt({ Agregar }) {
   };
 
   return (
-    <form className="nueva-nota" onSubmit={manejarEnvio}>
+    <form className="nueva-nota" onSubmit={envio}>
       <input type="text" placeholder="Título (opcional)" value={titulo} onChange={(e) => setTitulo(e.target.value)}/>
       <input type="text" placeholder="Descripción *" value={descripcion} onChange={(e) => setDescripcion(e.target.value)} required />
       <label>
