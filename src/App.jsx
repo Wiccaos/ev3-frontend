@@ -9,23 +9,28 @@ function App() {
     { titulo: "Prueba 10/07", desc: "No olvidar enviar la prueba", importante: true }
   ]);
 
+  // acá usamos la funcion para agregar un post-it y en setPostits se especifica que se agregue el nuevo postit inicio
   const agregarPostit = (postit) => {
     setPostits([postit, ...postits]);
   };
-
-  const eliminarPostit = (indice) => {
-    const nuevoPostit = postits.filter((_, i) => i !== indice);
+  // función para eliminar un post-it según su posición
+  // El filter crea un nuevo arreglo y saca el post-it a eliminar y el _ es para indicar que no se usará ese valor y la i la posicion
+  // y por último el setPostits actualiza todo sin el post-it eliminado
+  const eliminarPostit = (posicionPostit) => {
+    const nuevoPostit = postits.filter((_, i) => i !== posicionPostit);
     setPostits(nuevoPostit);
   };
 
   return (
-    <div className="contenedor-app">
-      <h1>Post It Simulator!</h1>
-      <FormularioPostIt Agregar={agregarPostit} />
-      <div className="contenedor-postits">
-        {postits.map((postit, posicionPostit) => (
-          <PostIt key={posicionPostit} posicionPostit={posicionPostit} postit={postit} alEliminar={eliminarPostit} />
-        ))}
+    <div className='app'>
+      <div className="contenedor-app">
+        <h1>Post It Simulator!</h1>
+        <FormularioPostIt Agregar={agregarPostit} />
+        <div className="contenedor-postits">
+          {postits.map((postit, posicionPostit) => (
+            <PostIt key={posicionPostit} posicionPostit={posicionPostit} postit={postit} eliminar={eliminarPostit} />
+          ))}
+        </div>
       </div>
     </div>
   );

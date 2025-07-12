@@ -27,6 +27,7 @@ input{
   border: none;
   border-radius: 5px;
   outline: none;
+
 }
 
 input:active{
@@ -58,6 +59,7 @@ input:active{
   margin: 10px auto;
   padding: 8px;
   margin-right: 5px;
+  width: 300px;
 }
 
 .contenedor-postits {
@@ -73,15 +75,12 @@ input:active{
 
 .postit {
   background-color: #FFFFCC;
-  display: flex;
-  flex-direction: column;
   padding: 5px;
   padding-top: 2px ;
   position: relative;
-  border-radius: 5px;
   rotate: -2deg;
   width: 300px;
-  height: auto;
+  height: 300px;
   box-sizing: border-box;
   box-shadow: 0 0 15px rgb(54, 54, 54);
   margin: 10px;
@@ -100,6 +99,11 @@ input:active{
   border: none;
   font-size: 16px;
   cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
 }
 
 @media (max-width: 600px) {
