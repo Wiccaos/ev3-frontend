@@ -27,6 +27,7 @@ function App() {
         <h1>Post It Simulator!</h1>
         <FormularioPostIt Agregar={agregarPostit} />
         <div className="contenedor-postits">
+          {/* Aquí con map() se revisa cada post-it y lo muestra en pantalla */}
           {postits.map((postit, posicionPostit) => (
             <PostIt key={posicionPostit} posicionPostit={posicionPostit} postit={postit} eliminar={eliminarPostit} />
           ))}
