@@ -16,6 +16,11 @@ p{
   line-height: 1.5;
 }
 
+h1{
+  text-align: left;
+  margin-left: 400px;
+}
+
 label{
   font-weight: bold;
   color: #fff;
@@ -136,5 +141,10 @@ input[type="checkbox"] {
     margin: 8px 0;
     width: 100%;
     box-sizing: border-box;
+  }
+
+  h1{
+    text-align: center;
+    margin-left: 0;
   }
 }
