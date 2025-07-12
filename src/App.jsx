@@ -6,7 +6,7 @@ function App() {
   // ejemplos iniciales para que la página no esté vacía
   const [postits, setPostits] = useState([
     { titulo: "Ejemplo 1", desc: "Esta es una nota de ejemplo", importante: false },
-    { titulo: "Prueba 10/07", desc: "No olvidar enviar la prueba", importante: true }
+    { titulo: "Prueba 10/07", desc: "No olvidar enviar la prueba antes del domingo a las 23:59 y no dejarla en borrador!!", importante: true }
   ]);
 
   // acá usamos la funcion para agregar un post-it y en setPostits se especifica que se agregue el nuevo postit inicio

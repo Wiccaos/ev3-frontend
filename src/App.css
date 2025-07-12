@@ -35,6 +35,11 @@ input:active{
   outline: none;
 }
 
+.desc{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .subir{
   background-color: #111;
   color: #fff;

@@ -8,7 +8,7 @@ function PostIt({ postit, eliminar, posicionPostit }) {
     <div className={`postit ${importante ? 'importante' : ''}`}>
       {/* el && funciona como un if, si titulo existe, se muestra el texto h2 */}
       {titulo && <h2>{titulo}</h2>}
-      <p>{desc}</p>
+      <p className='desc'>{desc}</p>
       <button className="cerrar" onClick={() => eliminar(posicionPostit)}>X</button>
     </div>
   );
