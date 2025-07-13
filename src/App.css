@@ -117,17 +117,17 @@ input[type="checkbox"] {
 }
 
 @media (max-width: 600px) {
-  /* el @media es para que cuando la página sea como en un teléfono se cambie a estas reglas */
+  /* el @media es para que cuando la página sea como en un teléfono (vertical) se cambie a estas reglas */
   .contenedor-postits {
     grid-template-columns: 1fr;   /* Solo una nota por fila */
-    width: 100%;                  /* ocupa todo el ancho disponible */
-    justify-items: center;        /* Centra las notas*/
+    width: 100%;
+    justify-items: center;
   }
   .postit {
     width: 90%;
     max-width: 320px;
   }
-  /* Para cambiar la disposiciópn del form */
+
   .nuevo-postit {
     display: flex;
     flex-direction: column;
